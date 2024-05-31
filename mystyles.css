@@ -1,0 +1,78 @@
+/*This is how the navigation is formated to go across the screen rather than a list*/
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    background-color: rgba(232, 224, 31, 1);
+    height: 50px;
+    text-align: center;
+}
+nav li {
+    flex-grow: 1;
+    flex-basis: 100px;
+    flex-shrink: 0;
+    font-family: 'Comic Sans MS', cursive;
+    border-left: 5px;
+    margin-right: 30px; 
+    margin-left: 30px;
+    padding-top: 15px;
+    background-color: rgba(15, 12, 162, 1);
+    color: white;
+}
+/*Gives the body of the page color, custom font, and color of the font*/
+body {
+    background-color: rgba(25, 23, 122, 1);
+    font-family: 'Comic Sans MS', cursive;
+    color: white;
+}
+/*Formats the header in appropriate positions*/
+header {
+    background-color: rgba(68, 51, 171, 1);
+    color: white;
+    font-family: 'Comic Sans MS', cursive;
+    p {
+        text-align: right;
+        margin-right: 30px;
+    }
+}
+/*Formats the main title of the page. Aligns in the center, custom font, size, and padding */
+h1 {
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 50px;
+    padding-top: 5px;
+}
+/*Formats the second header so that it appears next to the body text. */
+.title {
+    font-size: 20px;
+    margin: 30px;
+}
+/*Formats the footer by using an image as the background, custom font, aligning the text to the center, and putting padding on the text*/
+footer {
+    background-image: url('pictures/stars.jpeg');
+    color: white;
+    font-family: 'Comic Sans MS', cursive;
+    text-align: center;
+    height: 60px;
+    p {
+        padding-top: 15px;
+    }
+}
+/*Formats the body text to appear next to the second header.*/
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    p {
+        margin: 30px;
+        font-size: 23px;
+    }
+  }
+  /*centers the text to the center for the quiz title and difficulty level*/
+  .quiztitle {
+    text-align: center;
+  }
+  .difficulty {
+    text-align: center;
+  }
