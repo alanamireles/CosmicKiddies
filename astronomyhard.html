@@ -44,7 +44,55 @@
             <div class="difficulty">
                 <h3>Hard Mode</h3>
             </div>
-            
+            <form id="quizForm">
+                <div>
+                    <p>1. Astronomy involves studying objects we can't see. What might this include?</p>
+                    <input type="radio" name="question1" value="A"> A) Invisible stars<br>
+                    <input type="radio" name="question1" value="B"> B) Distant galaxies<br>
+                    <input type="radio" name="question1" value="C"> C) Dark matter<br>
+                    <input type="radio" name="question1" value="D"> D) All of the above<br>
+                </div>
+                <div>
+                    <p>2. What is one major difference between a telescope and a microscope?</p>
+                    <input type="radio" name="question2" value="A"> A) Telescopes are used for underwater exploration<br>
+                    <input type="radio" name="question2" value="B"> B) Microscopes are used for studying stars<br>
+                    <input type="radio" name="question2" value="C"> C) Telescopes are used to study space, microscopes to study small objects on Earth<br>
+                    <input type="radio" name="question2" value="D"> D) They are the same tool<br>
+                </div>
+                <div>
+                    <p>3. What is the main purpose of astronomy?</p>
+                    <input type="radio" name="question3" value="A"> A) To study the Earth's oceans<br>
+                    <input type="radio" name="question3" value="B"> B) To explore outer space and understand the universe<br>
+                    <input type="radio" name="question3" value="C"> C) To study plants and animals<br>
+                    <input type="radio" name="question3" value="D"> D) To examine weather patterns<br>
+                </div>
+                <button type="button" onclick="checkAnswers()">Submit</button>
+            </form>
+        
+            <p id="result"></p>
+        
+            <script>
+                function checkAnswers() {
+                    const correctAnswers = {
+                        question1: 'D',
+                        question2: 'C',
+                        question3: 'B'
+                    };
+        
+                    let score = 0;
+                    const form = document.getElementById('quizForm');
+                    const formData = new FormData(form);
+        
+                    for (const [question, correctAnswer] of Object.entries(correctAnswers)) {
+                        if (formData.get(question) === correctAnswer) {
+                            score++;
+                        }
+                    }
+        
+                    const result = document.getElementById('result');
+                    result.textContent = `You scored ${score} out of ${Object.keys(correctAnswers).length}`;
+                }
+            </script>
         </main>
         <footer>
             <p>

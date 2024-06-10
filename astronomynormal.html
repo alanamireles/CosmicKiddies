@@ -44,7 +44,55 @@
             <div class="difficulty">
                 <h3>Normal Mode</h3>
             </div>
-            
+            <form id="quizForm">
+                <div>
+                    <p>1. What kinds of objects do astronomers study that are beyond our planet Earth?</p>
+                    <input type="radio" name="question1" value="A"> A) Only the Moon<br>
+                    <input type="radio" name="question1" value="B"> B) Only the Sun<br>
+                    <input type="radio" name="question1" value="C"> C) Any objects in the sky, visible or invisible<br>
+                    <input type="radio" name="question1" value="D"> D) Only the stars<br>
+                </div>
+                <div>
+                    <p>2. Why do astronomers use telescopes?</p>
+                    <input type="radio" name="question2" value="A"> A) To look at small insects<br>
+                    <input type="radio" name="question2" value="B"> B) To study objects in space<br>
+                    <input type="radio" name="question2" value="C"> C) To look underwater<br>
+                    <input type="radio" name="question2" value="D"> D) To examine plants closely<br>
+                </div>
+                <div>
+                    <p>3. Which of these tools is NOT typically used by astronomers?</p>
+                    <input type="radio" name="question3" value="A"> A) Telescope<br>
+                    <input type="radio" name="question3" value="B"> B) Microscope<br>
+                    <input type="radio" name="question3" value="C"> C) Satellite<br>
+                    <input type="radio" name="question3" value="D"> D) Space probe<br>
+                </div>
+                <button type="button" onclick="checkAnswers()">Submit</button>
+            </form>
+        
+            <p id="result"></p>
+        
+            <script>
+                function checkAnswers() {
+                    const correctAnswers = {
+                        question1: 'C',
+                        question2: 'B',
+                        question3: 'B'
+                    };
+        
+                    let score = 0;
+                    const form = document.getElementById('quizForm');
+                    const formData = new FormData(form);
+        
+                    for (const [question, correctAnswer] of Object.entries(correctAnswers)) {
+                        if (formData.get(question) === correctAnswer) {
+                            score++;
+                        }
+                    }
+        
+                    const result = document.getElementById('result');
+                    result.textContent = `You scored ${score} out of ${Object.keys(correctAnswers).length}`;
+                }
+            </script>
         </main>
         <footer>
             <p>

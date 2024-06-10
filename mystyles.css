@@ -19,6 +19,13 @@ nav li {
     background-color: rgba(15, 12, 162, 1);
     color: white;
 }
+nav li a {
+    color: white;
+    text-decoration: none;
+}
+li a {
+    color: white;
+}
 /*Gives the body of the page color, custom font, and color of the font*/
 body {
     background-color: rgba(25, 23, 122, 1);
