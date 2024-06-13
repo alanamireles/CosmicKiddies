@@ -37,10 +37,10 @@ header {
     background-color: rgba(68, 51, 171, 1);
     color: white;
     font-family: 'Comic Sans MS', cursive;
-    p {
-        text-align: right;
-        margin-right: 30px;
-    }
+}
+header p {
+    text-align: right;
+    margin-right: 30px;
 }
 /*Formats the main title of the page. Aligns in the center, custom font, size, and padding */
 h1 {
@@ -61,9 +61,9 @@ footer {
     font-family: 'Comic Sans MS', cursive;
     text-align: center;
     height: 60px;
-    p {
-        padding-top: 15px;
-    }
+}
+footer p {
+    padding-top: 15px;
 }
 /*Formats the body text to appear next to the second header.*/
 .container {
@@ -71,11 +71,11 @@ footer {
     align-items: center;
     justify-content: center;
     margin: 30px;
-    p {
-        margin: 30px;
-        font-size: 23px;
-    }
   }
+  .container p {
+    margin: 30px;
+    font-size: 23px;
+}
   /*centers the text to the center for the quiz title and difficulty level*/
   .quiztitle {
     text-align: center;
